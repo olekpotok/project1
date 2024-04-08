@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
@@ -74,6 +78,7 @@ header h1 {
   font-weight: bold;
   text-align: center;
   line-height: 5rem;
+  z-index: 1;
 }
 @media screen and (min-width: 800px) {
   header h1 {
@@ -84,6 +89,13 @@ header h1 {
   header h1 {
     font-size: 8rem;
   }
+}
+header::after {
+  content: "";
+  background-color: rgba(1, 13, 0, 0.5176470588);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
